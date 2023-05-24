@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Store } from '@ngrx/store';
-import { customIncrement } from 'src/app/state/counter.action';
-import { counterState } from 'src/app/state/counter.state';
+import { customIncrement } from 'src/app/counter/state/counter.action';
+import { counterState } from 'src/app/counter/state/counter.state';
 
 @Component({
   selector: 'app-custom-counter',

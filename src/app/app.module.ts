@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { StoreModule } from '@ngrx/store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
-import { counterReducer } from './state/counter.reducer';
+import { counterReducer } from './counter/state/counter.reducer';
 import { HomeComponent } from './components/home/home.component';
 import { CounterComponent } from './counter/counter/counter.component';
 import { CounterOutputComponent } from './counter/counter-output/counter-output.component';
@@ -15,6 +15,7 @@ import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { ErrorPageComponent } from './components/error-page/error-page.component';
 import { PostListComponent } from './posts/post-list/post-list.component';
 import { FormsModule } from '@angular/forms';
+import { appReducer } from './store/app.state';
 
 
 @NgModule({
@@ -33,7 +34,7 @@ import { FormsModule } from '@angular/forms';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    StoreModule.forRoot({ counter: counterReducer }),
+    StoreModule.forRoot(appReducer),
     StoreDevtoolsModule.instrument({
     //logOnly: environment.production, // Restrict extension to log-only mode
     }),
