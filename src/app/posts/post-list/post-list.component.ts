@@ -22,4 +22,6 @@ export class PostListComponent implements OnInit {
     this.posts$ = this.store.select(getPosts);
   }
 
+  
+
 }

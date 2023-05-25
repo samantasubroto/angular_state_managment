@@ -14,8 +14,9 @@ import { CustomCounterComponent } from './counter/custom-counter/custom-counter.
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { ErrorPageComponent } from './components/error-page/error-page.component';
 import { PostListComponent } from './posts/post-list/post-list.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { appReducer } from './store/app.state';
+import { AddPostComponent } from './posts/add-post/add-post.component';
 
 
 @NgModule({
@@ -29,10 +30,12 @@ import { appReducer } from './store/app.state';
     NavBarComponent,
     ErrorPageComponent,
     PostListComponent,
+    AddPostComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    ReactiveFormsModule,
     FormsModule,
     StoreModule.forRoot(appReducer),
     StoreDevtoolsModule.instrument({
