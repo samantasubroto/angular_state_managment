@@ -1,8 +1,4 @@
-<div class="container">
-  <ng-container>
-    <a href="#" class="btn btn-primary" [routerLink]="['/posts/add-posts']">add posts</a>
-  </ng-container>
-  
+<div class="container">  
   <router-outlet></router-outlet>
   
   <table class="table" *ngIf="posts$ | async as posts">
@@ -11,6 +7,7 @@
        <th>id</th>
        <th>title</th>
        <th>description</th>
+       <th>Action</th>
       </tr>
     </thead>
     <tbody>
@@ -18,7 +15,13 @@
         <td>{{post.id}}</td>
         <td>{{post.title}}</td>
         <td>{{post.description}}</td>
+        <td>
+          <a href="" class="btn btn-warning" [routerLink]="['edit', post.id]">Update</a>
+        </td>
       </tr>
     </tbody>
   </table>
+  <ng-container>
+    <a href="#" class="btn btn-primary" [routerLink]="['/posts/add-posts']">add posts</a>
+  </ng-container>
 </div>

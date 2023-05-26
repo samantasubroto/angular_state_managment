@@ -1,0 +1,28 @@
+<div class="container">
+    <h1>Update Post</h1>
+    <form (ngSubmit)="updatePosts()" [formGroup]="addPostsForm">
+      <div class="row">
+        <div class="col-md-6">
+          <label>
+            <span class="label-content">
+              Title
+            </span>
+            <input class="form-control" type="text" name="title" formControlName="title" />
+          </label>
+        </div>
+        <div class="col-md-6">
+          <label>
+            <span class="label-content">
+              Description
+            </span>
+            <textarea class="form-control" type="text-area" name="description" formControlName="description"></textarea>
+          </label>
+        </div>
+        <div class="row">
+          <div class="col-12 ">
+            <button class="btn btn-secondary" type="submit">Update</button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
