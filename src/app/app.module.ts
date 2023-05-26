@@ -17,6 +17,7 @@ import { PostListComponent } from './posts/post-list/post-list.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { appReducer } from './store/app.state';
 import { AddPostComponent } from './posts/add-post/add-post.component';
+import { EditPostComponent } from './posts/edit-post/edit-post.component';
 
 
 @NgModule({
@@ -31,6 +32,7 @@ import { AddPostComponent } from './posts/add-post/add-post.component';
     ErrorPageComponent,
     PostListComponent,
     AddPostComponent,
+    EditPostComponent,
   ],
   imports: [
     BrowserModule,
