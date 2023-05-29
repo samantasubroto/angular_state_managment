@@ -17,6 +17,7 @@
         <td>{{post.description}}</td>
         <td>
           <a href="" class="btn btn-warning" [routerLink]="['edit', post.id]">Update</a>
+          <button class="btn btn-danger" (click)="deletePost(post)">delete</button>
         </td>
       </tr>
     </tbody>

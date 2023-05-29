@@ -1,45 +1,31 @@
-import { ENVIRONMENT_INITIALIZER, NgModule, isDevMode } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { StoreModule } from '@ngrx/store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
-import { counterReducer } from './counter/state/counter.reducer';
-import { HomeComponent } from './components/home/home.component';
-import { CounterComponent } from './counter/counter/counter.component';
-import { CounterOutputComponent } from './counter/counter-output/counter-output.component';
-import { CounterButtonComponent } from './counter/counter-button/counter-button.component';
-import { CustomCounterComponent } from './counter/custom-counter/custom-counter.component';
-import { NavBarComponent } from './components/nav-bar/nav-bar.component';
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
 import { ErrorPageComponent } from './components/error-page/error-page.component';
-import { PostListComponent } from './posts/post-list/post-list.component';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HomeComponent } from './components/home/home.component';
+import { NavBarComponent } from './components/nav-bar/nav-bar.component';
+import { CounterModule } from './counter/counter.module';
+import { PostModule } from './posts/posts.module';
 import { appReducer } from './store/app.state';
-import { AddPostComponent } from './posts/add-post/add-post.component';
-import { EditPostComponent } from './posts/edit-post/edit-post.component';
-
 
 @NgModule({
   declarations: [
     AppComponent,
-    CounterComponent,
-    CounterOutputComponent,
-    CounterButtonComponent,
-    CustomCounterComponent,
     HomeComponent,
     NavBarComponent,
     ErrorPageComponent,
-    PostListComponent,
-    AddPostComponent,
-    EditPostComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
     FormsModule,
-    StoreModule.forRoot(appReducer),
+    StoreModule.forRoot({}),
     StoreDevtoolsModule.instrument({
     //logOnly: environment.production, // Restrict extension to log-only mode
     }),

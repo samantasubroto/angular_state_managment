@@ -1,11 +1,11 @@
 import { createReducer, on } from "@ngrx/store"
 import { initalstate } from "./counter.state";
-import { customIncrement, decrement, increment, reset } from "./counter.action";
+import { customIncrement, decrement, increment123, reset } from "./counter.action";
 import { state } from "@angular/animations";
 
 const _couterReducer = createReducer(
     initalstate,    //initial state
-    on(increment, (state) => {  //increment is the action
+    on(increment123, (state) => {  //increment is the action
         return {
             ...state,  //returning old state as it is
             counter: state.counter + 1,  //on which varialbe and what action it need to perform
